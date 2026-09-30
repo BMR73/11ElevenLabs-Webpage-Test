@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { ElevenLabsClient } from "@elevenlabs/elevenlabs-node";
+import { ElevenLabsClient } from "elevenlabs";
 
 const app = express();
 app.use(cors());
@@ -29,4 +29,3 @@ app.post("/run-agent", async (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server running on port ${port}`));
-
